@@ -14,9 +14,10 @@ uploaded_file = st.file_uploader("Upload Excel file", type=["xls", "xlsx"])
 if uploaded_file is not None:
     try:
         if uploaded_file.name.endswith(".xls"):
-            df = pd.read_excel(uploaded_file, engine="xlrd")  # For .xls
+            df = pd.read_excel(uploaded_file, engine="odf")  # Alternative for .xls
         else:
-            df = pd.read_excel(uploaded_file, engine="openpyxl") 
+            df = pd.read_excel(uploaded_file, engine="openpyxl")  # For .xlsx
+
 
         st.success("File uploaded successfully!")
         st.dataframe(df.head())
