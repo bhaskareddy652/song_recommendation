@@ -7,20 +7,19 @@ st.title("Your Personalized Song Recommendations")
 st.write(  
     "Explore songs similar to your favorite tracks! Based on key musical features, we bring you the best recommendations using KNN."  
 )  
-uploaded_file = st.file_uploader("Upload your dataset (CSV or Excel file)", type=["csv", "xlsx"])
+st.title("Upload Your Dataset")
+
+uploaded_file = st.file_uploader("Upload Excel file", type=["xls", "xlsx"])
 
 if uploaded_file is not None:
     try:
-        # Check file type and read accordingly
-        if uploaded_file.name.endswith(".csv"):
-            df = pd.read_csv(uploaded_file)  # Read CSV file
+        if uploaded_file.name.endswith(".xls"):
+            df = pd.read_excel(uploaded_file, engine="xlrd")  # Supports .xls
         else:
-            df = pd.read_excel(uploaded_file, engine="openpyxl")  # Read Excel file
+            df = pd.read_excel(uploaded_file, engine="openpyxl")  # Supports .xlsx
 
-        # Show success message and dataset preview
-        st.success("Dataset loaded successfully! 🎵")
-        st.write("### Dataset Preview:")
+        st.success("File uploaded successfully!")
         st.dataframe(df.head())
-    
+
     except Exception as e:
-        st.error(f"Error loading dataset: {e}")
+        st.error(f"Error loading file: {e}")
