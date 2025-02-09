@@ -7,7 +7,7 @@ st.title("Your Personalized Song Recommendations")
 st.write(  
     "Explore songs similar to your favorite tracks! Based on key musical features, we bring you the best recommendations using KNN."  
 )  
-uploaded_file = st.file_uploader("Upload your dataset (Excel file)", type=["xlsx"])
+uploaded_file = st.file_uploader("Upload your dataset (Excel file)", type=["csv"])
 if uploaded_file is not None:
     try:
         # Specify engine="openpyxl" to avoid format detection issues
