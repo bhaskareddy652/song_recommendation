@@ -95,12 +95,13 @@ def main():
 
         # Plot song popularity distribution (optional visualization)
         st.header("Song Popularity Distribution")
-        plt.figure(figsize=(8, 5))
-        plt.hist(df['popularity'], bins=20, color='skyblue', edgecolor='black')
-        plt.title('Distribution of Song Popularity')
-        plt.xlabel('Popularity')
-        plt.ylabel('Frequency')
-        st.pyplot()
+        fig, ax = plt.subplots(figsize=(8, 5))  # Create figure and axes
+        ax.hist(df['popularity'], bins=20, color='skyblue', edgecolor='black')
+        ax.set_title('Distribution of Song Popularity')
+        ax.set_xlabel('Popularity')
+        ax.set_ylabel('Frequency')
+        st.pyplot(fig)  # Pass the figure object to st.pyplot()
+
 
     else:
         st.info("Please upload a CSV file to get started.")
