@@ -57,9 +57,11 @@ speechiness: A measure of the presence of spoken words in the song.
 tempo: The tempo (speed) of the song.
 
 ## 📝 How It Works
-## Data Preprocessing: The dataset is first cleaned and preprocessed, scaling numerical columns using MinMaxScaler.
-## Model Training: A KNN model is trained using selected features from the dataset to find the most similar songs.
-## Recommendation: Once the model is trained, you can enter the name of a song, and the system will recommend similar songs based on their features.
+1.Data Preprocessing: The dataset is first cleaned and preprocessed, scaling numerical columns using MinMaxScaler.
+
+2.Model Training: A KNN model is trained using selected features from the dataset to find the most similar songs.
+
+3.Recommendation: Once the model is trained, you can enter the name of a song, and the system will recommend similar songs based on their features.
 ## 🔧 Usage
 
 Upload your dataset: Upload a CSV file with the required song features.
