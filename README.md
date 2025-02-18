@@ -15,7 +15,7 @@ Scikit-learn for building the KNN model
 
 Matplotlib for data visualization
 
-## 📊 Data Columns (Example)
+## 📊 Data Columns
 The dataset used in the project includes the following features:
 
 valence: The musical positiveness of a song (positive or negative).
@@ -57,9 +57,9 @@ speechiness: A measure of the presence of spoken words in the song.
 tempo: The tempo (speed) of the song.
 
 ## 📝 How It Works
-# Data Preprocessing: The dataset is first cleaned and preprocessed, scaling numerical columns using MinMaxScaler.
-# Model Training: A KNN model is trained using selected features from the dataset to find the most similar songs.
-# Recommendation: Once the model is trained, you can enter the name of a song, and the system will recommend similar songs based on their features.
+## Data Preprocessing: The dataset is first cleaned and preprocessed, scaling numerical columns using MinMaxScaler.
+## Model Training: A KNN model is trained using selected features from the dataset to find the most similar songs.
+## Recommendation: Once the model is trained, you can enter the name of a song, and the system will recommend similar songs based on their features.
 ## 🔧 Usage
 
 Upload your dataset: Upload a CSV file with the required song features.
