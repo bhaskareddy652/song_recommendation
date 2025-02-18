@@ -60,7 +60,7 @@ def main():
         st.write("Here are the first few rows of your dataset:")
         st.dataframe(df.head())
         st.header("Find Similar Songs")
-        song_name = st.radio("Select a song name:", df['name'].tolist()) 
+        song_name = st.text_input("Enter a song name:", "Paper Doll")
         if st.button("Recommend"):
             recommendations = recommend_songs(song_name, df, nn_model)
             # Display recommendations or error messages
