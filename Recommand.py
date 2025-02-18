@@ -71,6 +71,11 @@ def main():
 
         # Train KNN model
         nn_model = train_model(df)
+
+        # Display dataset summary (optional)
+        st.header("Dataset Overview")
+        st.write("Here are the first few rows of your dataset:")
+        st.dataframe(df.head())
         
         # User input for song name
         st.header("Find Similar Songs")
@@ -87,12 +92,6 @@ def main():
                     st.write(f"- {song}")
             else:
                 st.warning(recommendations)
-                
-        # Display dataset summary (optional)
-        st.header("Dataset Overview")
-        st.write("Here are the first few rows of your dataset:")
-        st.dataframe(df.head())
-
         # Plot song popularity distribution (optional visualization)
         st.header("Song Popularity Distribution")
         fig, ax = plt.subplots(figsize=(8, 5))  # Create figure and axes
