@@ -64,8 +64,19 @@ tempo: The tempo (speed) of the song.
 3.Recommendation: Once the model is trained, you can enter the name of a song, and the system will recommend similar songs based on their features.
 ## 🔧 Usage
 
-Upload your dataset: Upload a CSV file with the required song features.
+1.Upload your dataset: Upload a CSV file with the required song features.
 
-Enter a song: Type the name of the song you want to get recommendations for.
+2.Enter a song: Type the name of the song you want to get recommendations for.
 
-Get recommendations: Click on the "Recommend" button, and the system will display a list of similar songs.
+3.Get recommendations: Click on the "Recommend" button, and the system will display a list of similar songs.
+
+## Example of usage:
+
+1.Upload a CSV containing songs and their features like danceability, energy, and tempo.
+
+2.Enter a song title (e.g., "Shape of You") and get a list of similar songs!
+
+## 🖥️ Web Interface
+The web interface is created using Streamlit, which allows users to upload data and interact with the recommendation model easily.
+
+
